@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+	<constant name="struts.action.extension" value=",html,svg,json"/>
+    <constant name="struts.enable.DynamicMethodInvocation" value="false" />
+    <constant name="struts.devMode" value="false" />
+    <constant name="struts.convention.result.path" value="/"/>
+    <constant name="struts.convention.package.locators.basePackage" value="de.fuberlin.livevoting.server.action"/>
+    <constant name="struts.convention.relative.result.types" value="dispatcher"/>
+    <constant name="struts.convention.default.parent.package" value="default"/>
+    <constant name="struts.custom.i18n.resources" value="messages" />
+    
+    <!-- Used for advanced wilcard mapping -->
+	<constant name="struts.enable.SlashesInActionNames" value="false"/>
+	<constant name="struts.mapper.alwaysSelectFullNamespace" value="true"/>
+	<constant name="struts.patternMatcher" value="regex" />
+
+	<package name="default" extends="hibernate-default">
+		<result-types>
+			<result-type name="json" class="org.apache.struts2.json.JSONResult"/>
+		</result-types>
+		
+        <interceptors>
+        	<interceptor name="parameterEmptyId" class="de.fuberlin.livevoting.server.action.interceptor.ParameterIdInterceptor"/>
+        	<interceptor name="adminLogin" class="de.fuberlin.livevoting.server.action.interceptor.AuthenticationInterceptor"/>
+        	
+			<interceptor-stack name="parameterSupported">
+				<interceptor-ref name="parameterEmptyId" />
+				<interceptor-ref name="defaultStackHibernate" />
+            </interceptor-stack>
+
+			<interceptor-stack name="authenticationSupported">
+				<interceptor-ref name="adminLogin" />
+				<interceptor-ref name="parameterSupported" />
+            </interceptor-stack>
+        </interceptors>
+	</package>
+</struts>

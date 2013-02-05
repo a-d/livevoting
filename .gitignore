@@ -1,0 +1,13 @@
+/LiveVotingServer-webapp/*.db
+
+/LiveVotingServer-server/*.db
+/LiveVotingServer-webapp/target
+/LiveVotingServer-webapp/.classpath
+/LiveVotingServer-webapp/.project
+/LiveVotingServer-webapp/.settings
+/LiveVotingServer-server/.classpath
+/LiveVotingServer-server/.project
+/LiveVotingServer-server/.settings
+/LiveVotingServer/.classpath
+/LiveVotingServer/.project
+/LiveVotingServer/.settings

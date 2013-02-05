@@ -1,0 +1,13 @@
+
+tr.jqgrow img {
+	display:block;
+	max-width:100%;
+}
+
+td[aria-describedby=answerstable_picture] {
+	background-color:#000000;
+}
+
+li.logout {
+    background: #EE3399;
+}

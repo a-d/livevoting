@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+
+		<property name="show_sql">false</property>
+		
+		<property name="hibernate.connection.driver_class">org.h2.Driver</property>
+		
+		<!--
+		Weitere Parameter:
+		;DB_CLOSE_ON_EXIT=TRUE;FILE_LOCK=SOCKET
+		;DB_CLOSE_ON_EXIT=TRUE;FILE_LOCK=NO
+		 -->
+		<property name="hibernate.connection.url">jdbc:h2:livevoting;DB_CLOSE_ON_EXIT=TRUE;FILE_LOCK=NO</property>
+		<property name="hibernate.connection.username">LiveVoting</property>
+		<property name="hibernate.connection.password"></property>
+		<property name="hibernate.default_schema">PUBLIC</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.H2Dialect</property>
+		
+		<!-- Enable Hibernate's automatic session context management -->
+		<property name="current_session_context_class">thread</property>
+		
+		<!-- Disable the second-level cache -->
+		<property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+
+		<!--
+		Weitere Parameter:
+		update, create -->
+		<property name="hbm2ddl.auto">update</property>
+		
+		
+		<mapping class="de.fuberlin.livevoting.server.domain.Answer" />
+		<mapping class="de.fuberlin.livevoting.server.domain.Course" />
+		<mapping class="de.fuberlin.livevoting.server.domain.Message" />
+		<mapping class="de.fuberlin.livevoting.server.domain.Question" />
+		<mapping class="de.fuberlin.livevoting.server.domain.Teacher" />
+		<mapping class="de.fuberlin.livevoting.server.domain.User" />
+		<mapping class="de.fuberlin.livevoting.server.domain.Vote" />
+	</session-factory>
+</hibernate-configuration>
