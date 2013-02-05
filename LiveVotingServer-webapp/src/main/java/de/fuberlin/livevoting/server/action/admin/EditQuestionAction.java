@@ -23,6 +23,14 @@ public class EditQuestionAction extends ActionSupportCRUD<Question> implements M
 	private SimpleObjectDAOImpl<Question> questionDao = new QuestionDAOImpl();
 	private Question question = new Question();
 
+	@Override
+	protected void updatePrepare(Question obj, Question oldObj) throws Exception {
+		super.updatePrepare(obj, oldObj);
+		
+		obj.setPicture(oldObj.getPicture());
+	}
+	
+	
 	/*
 	 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 	 */
