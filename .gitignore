@@ -11,3 +11,5 @@
 /LiveVotingServer/.classpath
 /LiveVotingServer/.project
 /LiveVotingServer/.settings
+/.metadata
+/LiveVotingServer-server/target

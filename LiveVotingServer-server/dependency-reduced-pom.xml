@@ -4,7 +4,7 @@
     <artifactId>LiveVoting</artifactId>
     <groupId>de.fuberlin.livevoting.server</groupId>
     <version>0.2</version>
-    <relativePath>../LiveVotingServerMaven2/pom.xml</relativePath>
+    <relativePath>../LiveVotingServer/pom.xml</relativePath>
   </parent>
   <modelVersion>4.0.0</modelVersion>
   <artifactId>LiveVoting-server</artifactId>

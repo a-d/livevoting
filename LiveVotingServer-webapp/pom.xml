@@ -4,7 +4,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
-	<artifactId>LiveVoting-webapp</artifactId>
+	<artifactId>LiveVotingServer-webapp</artifactId>
 	<packaging>war</packaging>
 	<name>LiveVoting Server Application - Actual Application</name>
 
@@ -213,11 +213,6 @@
 			<groupId>javax.ejb</groupId>
 			<artifactId>ejb-api</artifactId>
 			<version>3.0</version>
-		</dependency>
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-c3p0</artifactId>
-			<version>3.6.3.Final</version>
 		</dependency>
 
 
