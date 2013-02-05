@@ -2,15 +2,19 @@ LiveVoting
 ==========
 
 
+
 LiveVoting is a software project, originally started as part of a german bachelor assignment called
 "LiveVoting - Entwurf und Implementierung eines auf Zeichnungen ausgelegten Online-Abstimmungssystems"
 by Alexander Dümont.
 
-It started at the institute for computer science of Freie Universität Berlin. The project was supervised
-by Prof. Dr. Margarita Esponda-Argüero, who still has strong influence in the ongoing development.
+It started at the institute for computer science of [Freie Universität Berlin](http://www.mi.fu-berlin.de/inf/). The project was supervised
+by [Prof. Dr. Margarita Esponda-Argüero](http://www.esponda.de/), who still has strong influence in the ongoing development.
 The idea of LiveVoting and finally the software project itself was started due to the lack of productive
 tools, which could help to improve the attention and participation of students and teachers during
 collaboration lessens.
+
+
+![LiveVoting](https://raw.github.com/a-d/livevoting/master/LiveVotingServer-webapp/src/main/webapp/logo.png)
 
 
 
